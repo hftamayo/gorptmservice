@@ -16,7 +16,7 @@ func NewExcelGenerator() *ExcelGenerator {
 }
 
 func (eg *ExcelGenerator) GenerateSampleExcel(filename string) error {
-	index := eg.excel.NewSheet("Sheet1")
+	index, _ := eg.excel.NewSheet("Sheet1")
 	eg.excel.SetCellValue("Sheet1", "A1", "Hello")
 	eg.excel.SetCellValue("Sheet1", "B1", "World")
 	eg.excel.SetActiveSheet(index)
